@@ -1,15 +1,15 @@
-function [] = MergetoRGB(img, B, R, G, a )
+function [] = MergetoRGB(img, B, R, G, d, a )
 % img is input image, 
 % B, R, G are the divided channels
 % d is the cropped image dimension
 % a is the search window dimension ([-a,+a])
 
- b1=double(B);
- g1=double(G);
- r1=double(R);
-%  b1=double(b(146:146+d,255-d:225));
-%  g1=double(g(146:146+d,255-d:225));
-%  r1=double(r(146:146+d,255-d:225));
+ b=double(B);
+ g=double(G);
+ r=double(R);
+ b1=double(b(146:146+d,255-d:225));
+ g1=double(g(146:146+d,255-d:225));
+ r1=double(r(146:146+d,255-d:225));
 
  %% choose green channel as a refrence
 
@@ -52,26 +52,26 @@ function [] = MergetoRGB(img, B, R, G, a )
  RGBimage=cat(3,uint8(RedShift),uint8(g),uint8(BlueShift));
 
 %% plot the results
-% 
-%  subplot(3, 3, 2);
-%  imshow(img);
-%  fontSize = 10;
-%  title('Original RGB Image', 'FontSize', fontSize)
-% 
-%  subplot(3, 3, 4);
-%  imshow(B);
-%  title('Blue channel', 'FontSize', fontSize)
-% 
-%  subplot(3, 3, 5);
-%  imshow(G);
-%  title('Green channel', 'FontSize', fontSize)
-% 
-%  subplot(3, 3, 6);
-%  imshow(R);
-%  title('Red channel', 'FontSize', fontSize)
 
- %subplot(3, 3, 8);
+ subplot(3, 3, 2);
+ imshow(img);
+ fontSize = 10;
+ title('Original RGB Image', 'FontSize', fontSize)
+
+ subplot(3, 3, 4);
+ imshow(B);
+ title('Blue channel', 'FontSize', fontSize)
+
+ subplot(3, 3, 5);
+ imshow(G);
+ title('Green channel', 'FontSize', fontSize)
+
+ subplot(3, 3, 6);
+ imshow(R);
+ title('Red channel', 'FontSize', fontSize)
+
+ subplot(3, 3, 8);
  imshow(RGBimage);
- %title('RGB Image', 'FontSize', fontSize)
+ title('RGB Image', 'FontSize', fontSize)
 
 end

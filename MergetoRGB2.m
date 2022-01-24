@@ -51,25 +51,25 @@ function [] = MergetoRGB2(img, B, R, G, d, a )
 
 %% plot the results
 
-%   subplot(3, 3, 2);
-%   imshow(img);
-%   fontSize = 10;
-%   title('Original RGB Image', 'FontSize', fontSize)
-% 
-%   subplot(3, 3, 4);
-%   imshow(B);
-%   title('Blue channel', 'FontSize', fontSize)
-% 
-%   subplot(3, 3, 5);
-%   imshow(G);
-%   title('Green channel', 'FontSize', fontSize)
-% 
-%   subplot(3, 3, 6);
-%   imshow(R);
-%   title('Red channel', 'FontSize', fontSize)
+  subplot(3, 3, 2);
+  imshow(img);
+  fontSize = 10;
+  title('Original RGB Image', 'FontSize', fontSize)
 
-  %subplot(3, 3, 8);
+  subplot(3, 3, 4);
+  imshow(B);
+  title('Blue channel', 'FontSize', fontSize)
+
+  subplot(3, 3, 5);
+  imshow(G);
+  title('Green channel', 'FontSize', fontSize)
+
+  subplot(3, 3, 6);
+  imshow(R);
+  title('Red channel', 'FontSize', fontSize)
+
+  subplot(3, 3, 8);
   imshow(RGBimage);
-  %title('RGB Image', 'FontSize', fontSize)
+  title('RGB Image', 'FontSize', fontSize)
 
 end

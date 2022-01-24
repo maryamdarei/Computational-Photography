@@ -13,10 +13,5 @@ B=img(1:n1,1:m); % Blue channel
 G=img(n1+1:n2,1:m); % Green channel
 R=img(n2+1:n3,1:m); % Red Channel
 
-[gm,gn] = size(G);
-Bluerezie= imresize(B,[gm,gn]);
-Redresize = imresize(R,[gm,gn]);
-
-
-MergetoRGB(img, Bluerezie, Redresize, G, 50)
-%MergetoRGB2(img, Bluerezie, Redresize, G, 10, 10)
+%MergetoRGB(img, B, R, G, 50, 20)
+MergetoRGB2(img, B, R, G, 50, 50)
